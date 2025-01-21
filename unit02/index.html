@@ -4,16 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Numbers</title>
+    <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']], // Explicitly include $...$
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+          },
+          options: {
+              skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','annotation', 'annotation-xml'],
+              processEscapes: true
+          }
+        };
+        </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../unitCommonStyles.css">
 </head>
 <body>
     <div id="unit">
-        <p><b>NOTE: This page is yet to be developed</b></p>  <!-- Remove this entire tag when starting to develop -->
         <h2 id="unitName">Numbers</h2>
         <div id="unitBody">
-            <h3>a section</h3>
-            <p>Its contents</p>
+            <h3>General concepts</h3>
+            <h4>Place value or local Value Of a Digit in a Numeral: </h4>
+            <p>In the numeral 68974532, we have: </p>
+            <ul>
+                <li>Place value of 2 is 2 units =  2;</li>
+                <li>Place value of 3 is 3 tens =  30;</li>
+                <li>Place value of 5 is 5 hundreds =  500;</li>
+                <li>Place value of 4 is 4 thousands =  4000 and so on.</li>
+            </ul>
+            <dl>
+                <dt>Face Value: </dt>
+                <dd>The face value of a digit in a numeral is the value of the digit itself at whatever place it may be.</dd>
+            </dl>
+            <p>In the above numeral, the face value of 2 is 2; the face value of 3 is 3 and so on.</p>
+            <dl>
+                <dt>Natural Numbers: </dt>
+                <dd>Counting numbers 1, 2, 3, 4, ... are known as natural numbers.</dd>
+            </dl>
+
+            <h4>Unit's Digit in a Product: </h4>
+            <div class="example">
+                <div class="ProblemDescription">
+                    <p><span class="question">Example 1: </span></p>
+                    <p>Find the unit's digit in the product ($256 \times 27 \times 159 \times 182$).</p>
+                </div>
+                <div class="ProblemSolution">
+                    <span class="answer">Solution: </span>
+                    <p>Product of unit's digits in given numbers = $(6 \times 7 \times 9 \times 2) = 756$.</p>
+                    <p>$\therefore$ Unit digit in the given product is 6.</p>
+                </div>
+            </div>
         </div>
     </div>
     <script src="./script.js" type="module"></script>

@@ -1,3 +1,11 @@
+:root {
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
 #unitName {
     text-align: center;
     width: 100%;
@@ -15,4 +23,36 @@
     background: #ebe1e1;
     padding: 4px;
     border-radius: 4px;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    font-style: italic;
+    margin-left: 4ch;
+}
+
+.example {
+    border: 1px solid greenyellow;
+    padding: 2px 12px;
+}
+
+.question {
+    color: red;
+    font-weight: bold;
+}
+
+.answer {
+    color: blue;
+    font-weight: bold;
 }

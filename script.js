@@ -41,5 +41,5 @@ contentListItems.forEach((contentItem) => {
 // ------------------ ON DOM loaded
 
 document.addEventListener('DOMContentLoaded', () => {
-    unitFrame.src = `./unit01/index.html`;
+    unitFrame.src = `./unit02/index.html`;
 })
