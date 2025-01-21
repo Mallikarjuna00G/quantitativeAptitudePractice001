@@ -16,16 +16,19 @@ contentToIndexHTML = """<!DOCTYPE html>
     <div id="unit">
         <p><b>NOTE: This page is yet to be developed</b></p>  <!-- Remove this entire tag when starting to develop -->
         <h2 id="unitName">{}</h2>
-            <p></p>
-            <div id="someInformation"></div>  <!-- TODO: calculate and feed the reading time of the page -->
         <div id="unitBody">
             <h3>a section</h3>
             <p>Its contents</p>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./script.js" type="module"></script>
 </body>
 </html>"""
+
+contentToJSFile = """import {readTimeFunction} from "../unitCommonScript.js";
+
+readTimeFunction();
+"""
 
 def createFiles(filePath, content):
     if not os.path.exists(filePath):
@@ -44,5 +47,5 @@ for i in range(len(unitNames)):
 
     createFiles(f"{folderPath}/index.html", contentToIndexHTML.format(unitNames[i], unitNames[i]))
     createFiles(f"{folderPath}/styles.css", "")
-    createFiles(f"{folderPath}/script.js", "")
+    createFiles(f"{folderPath}/script.js", contentToJSFile)
     
