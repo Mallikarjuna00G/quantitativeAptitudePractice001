@@ -56,7 +56,7 @@
                     <p>$\therefore$ Unit digit in the given product is 6.</p>
                     <hr>
                     <div class="srcFile">
-                        <a href="script.js" target="_blank" class="programLink">./script.js</a>
+                        <a href="example001.js" target="_blank" class="programLink">./example001.js</a>
                         <pre><code class="language-javascript"></code></pre>
                     </div>
                 </div>
@@ -64,14 +64,131 @@
             <div class="example">
                 <div class="ProblemDescription">
                     <p><span class="question">Example 2: </span></p>
-                    <p></p>
+                    <p>Find the unit's digit in the product $(3^{67} \times 6^{39} \times 7^{53})$.</p>
                 </div>
                 <div class="ProblemSolution">
                     <span class="answer">Solution: </span>
-                    <p></p>
+                    <p>Clearly, unit digit in $3^4$ is 1.</p>
+                    <p>$\therefore$ Unit digit in $3^{64}$ is 1.</p>
+                    <p><b>$\therefore$ Unit digit in $3^{67}$ is 7.</b> [$\because$ Unit digit in $1 \times 3 \times 3 \times 3$ is 7]</p>
+                    <p>Clearly, unit digit in every power of 6 is 6.</p>
+                    <p><b>$\therefore$ Unit digit in $6^{39}$ is 6.</b></p>
+                    <p>Clearly, unit digit in $7^4$ is 1.</p>
+                    <p>$\therefore$ Unit digit in $7^{52}$ is 1.</p>
+                    <p><b>$\therefore$ Unit digit in $7^{53}$ is 7.</b> [$\because$ Unit digit in $1 \times 7$ is 7]</p>
+
+                    <p>$\therefore$ Unit digit in given product = Unit digit in $(7 \times 6 \times 7)$ = 4</p>
+                    <hr>
+                    <p><b>Explanation:</b></p>
+                    <p>We have a method to find the unit digit of $x^y$ without calculating the entire value. It relies on the cyclical patterns of unit digits when numbers are raised to different powers. Here's a breakdown:</p>
+                    <ol>
+                        <li>Focus on the Unit Digit of the Base ($x$)
+                            <p>Only the unit digit of '$x$' matters. For example, if $x$ is 123, you only need to consider 3.</p>
+                        </li>
+                        <li>Identify the Cyclicity of the Unit Digit
+                            <p>Each digit from 0 to 9 has a cycle of unit digits when raised to consecutive powers. Here are some examples:</p>
+                            <table>
+                                  <tr>
+                                    <th>Digit</th>
+                                    <th>Clause</th>
+                                    <th>Outputs</th>
+                                    <th>Cycle length</th>
+                                    <th>Iterations</th>
+                                  </tr>
+                                  <tr>
+                                    <th>0</th>
+                                    <td>Always</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>(0, 0, 0, ...)</td>
+                                  </tr>
+                                  <tr>
+                                    <th>1</th>
+                                    <td>Always</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>(1, 1, 1, ...)</td>
+                                  </tr>
+                                  <tr>
+                                    <th>2</th>
+                                    <td>Cycles through</td>
+                                    <td>2, 4, 8, 6</td>
+                                    <td>4</td>
+                                    <td>(2, 4, 8, 16, 32...)</td>
+                                  </tr>
+                                  <tr>
+                                    <th>3</th>
+                                    <td>Cycles through</td>
+                                    <td>3, 9, 7, 1</td>
+                                    <td>4</td>
+                                    <td>(3, 9, 27, 81, 243...)</td>
+                                  </tr>
+                                  <tr>
+                                    <th>4</th>
+                                    <td>Cycles through</td>
+                                    <td>4, 6</td>
+                                    <td>2</td>
+                                    <td>(4, 16, 64, 256...)</td>
+                                  </tr>
+                                  <tr>
+                                    <th>5</th>
+                                    <td>Always</td>
+                                    <td>5</td>
+                                    <td>1</td>
+                                    <td>(5, 25, 125, ...)</td>
+                                  </tr>
+                                      <tr>
+                                    <th>6</th>
+                                    <td>Always</td>
+                                    <td>6</td>
+                                    <td>1</td>
+                                    <td>(6, 36, 216, ...)</td>
+                                  </tr>
+                                      <tr>
+                                    <th>7</th>
+                                    <td>Cycles through</td>
+                                    <td>7, 9, 3, 1</td>
+                                    <td>4</td>
+                                    <td>(7, 49, 343, 2401...)</td>
+                                  </tr>
+                                      <tr>
+                                    <th>8</th>
+                                    <td>Cycles through</td>
+                                    <td>8, 4, 2, 6</td>
+                                    <td>4</td>
+                                    <td>(8, 64, 512, 4096...)</td>
+                                  </tr>
+                                    <tr>
+                                        <th>9</th>
+                                        <td>Cycles through</td>
+                                        <td>9, 1</td>
+                                        <td>2</td>
+                                        <td>(9, 81, 729, ...)</td>
+                                  </tr>
+                              </table>
+                        </li>
+                        <li>Determine the Remainder of the Exponent ($y$) When Divided by the Cycle Length
+                            <p>Divide the exponent $y$ by the length of the cycle for the unit digit of $x$. The remainder of this division is the key.</p>
+                        </li>
+                        <li>Find the Corresponding Unit Digit in the Cycle
+                            <p>Use the remainder to find the unit digit in the cycle. A remainder of 0 means you use the last digit in the cycle. A remainder of 1 means you use the first digit in the cycle, and so on.</p>
+                        </li>
+                    </ol>
+                    <p><b>Example:</b></p>
+                    <p>Find the unit digit of $7^{23}$</p>
+                    <ul>
+                        <li>Unit digit of the base: 7</li>
+                        <li>Cycle of 7: 7, 9, 3, 1 (cycle length is 4)</li>
+                        <li>Remainder: 23 divided by 4 is 5 with a remainder of 3.</li>
+                        <li>Corresponding unit digit: The third digit in the cycle of 7 is 3.</li>
+                        <li>Therefore, the unit digit of $7^{23}$ is 3.</li>
+                    </ul>   
+                    <p><b>Important Notes:</b></p>
+                    <p>Any number ending in 0, 1, 5, or 6 will always have the same unit digit when raised to any positive integer power.</p>
+                    <p>This method simplifies finding unit digits of large exponents considerably.</p>
                     <hr>
                     <div class="srcFile">
-                        <a href="script.js" target="_blank" class="programLink">./script.js</a>
+                        <a href="example002.js" target="_blank" class="programLink">./example002.js</a>
                         <pre><code class="language-javascript"></code></pre>
                     </div>
                 </div>

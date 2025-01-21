@@ -56,3 +56,17 @@ dd {
     color: blue;
     font-weight: bold;
 }
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr, td, th {
+    border: 1px solid black;
+    padding: 4px 8px;
+}
+
+li {
+    margin: 12px 4px;
+}
