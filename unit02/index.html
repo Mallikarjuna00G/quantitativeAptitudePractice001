@@ -193,6 +193,72 @@
                     </div>
                 </div>
             </div>  <!-- example -->
+            <dl>
+                <dt>Even Numbers: </dt>
+                <dd>A number divisible by 2 is called an even number.<br>e.g. 2, 4, 6, 8, 10 etc</dd>
+                <dt>Odd Numbers: </dt>
+                <dd>A number not divisible by 2 is called an odd number.<br>e.g. 1, 3, 5, 7, 9, 11, 13, 15, 17 etc</dd>
+                <dt>Prime Numbers: </dt>
+                <dd>Every number larger than 1 having exactly two factors is called a prime number.</dd>
+            </dl>
+            <div class="example">
+                <div class="ProblemDescription">
+                    <p><span class="question">Example 3: </span></p>
+                    <p>Prime numbers less than 100 are: <br>2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97.</p>
+                    <p>Prime numbers larger than 100: ?</p>
+                </div>
+                <div class="ProblemSolution">
+                    <span class="answer">Solution: </span>
+                    <p><b>Test:</b> Let $p$ be a given number. Find a whole number nearly greater than the square root of $p$.</p>
+                    <p>Let $k \gt \sqrt{p}$.</p>
+                    <p>Test whether $p$ is divisible by any prime number less than $k$. If yes, then $p$ is not prime. Otherwise, $p$ is prime.</p>
+                    <hr>
+                    <div class="srcFile">
+                        <a href="example003.js" target="_blank" class="programLink">./example003.js</a>
+                        <pre><code class="language-javascript"></code></pre>
+                    </div>
+                </div>
+            </div>  <!-- example -->
+            <div class="example">
+                <div class="ProblemDescription">
+                    <p><span class="question">Example 4: </span></p>
+                    <p>Which of the following are prime numbers?</p>
+                    <ol type="i">
+                        <li>191</li>
+                        <li>241</li>
+                        <li>337</li>
+                        <li>391</li>
+                    </ol>
+                </div>
+                <div class="ProblemSolution">
+                    <span class="answer">Solution: </span>
+                    <ol type="i">
+                        <li>Clearly, $14 > \sqrt{191}$.
+                            <p>Prime numbers less than 14 are 2, 3, 5, 7, 11, 13.</p>
+                            <p>191 is not divisible by any of them.</p>
+                            <p>So, 191 is a prime number.</p>
+                        </li>
+                        <li>Clearly, $16 > \sqrt{241}$.
+                            <p>Prime numbers less than 16 are 2, 3, 5, 7, 11, 13.</p>
+                            <p>241 is not divisble by any of them.</p>
+                            <p>$\therefore$ 241 is a prime number.</p>
+                        </li>
+                        <li>Clearly, $19 > \sqrt{337}$.
+                            <p>Prime numbers less than 19 are 2, 3, 5, 7, 11, 13, 17.</p>
+                            <p>337 is not divisble by any of them.</p>
+                            <p>$\therefore$ 337 is a prime number.</p></li>
+                        <li>Clearly, $20 > \sqrt{391}$.
+                            <p>Prime numbers less than 20 are 2, 3, 5, 7, 11, 13, 17, 19.</p>
+                            <p>391 is divisble by 17.</p>
+                            <p>$\therefore$ 391 is not a prime number.</p></li>
+                    </ol>
+                    <hr>
+                    <div class="srcFile">
+                        <a href="example004.js" target="_blank" class="programLink">./example004.js</a>
+                        <pre><code class="language-javascript"></code></pre>
+                    </div>
+                </div>
+            </div>  <!-- example -->
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
