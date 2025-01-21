@@ -24,6 +24,7 @@ contentToIndexHTML = """<!DOCTYPE html>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../unitCommonStyles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/default.min.css">
 </head>
 <body>
     <div id="unit">
@@ -34,13 +35,16 @@ contentToIndexHTML = """<!DOCTYPE html>
             <p>Its contents</p>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/Javascript.min.js"></script>
     <script src="./script.js" type="module"></script>
 </body>
 </html>"""
 
-contentToJSFile = """import {readTimeFunction} from "../unitCommonScript.js";
+contentToJSFile = """import {readTimeFunction, doSyntaxHighlighting} from "../unitCommonScript.js";
 
 readTimeFunction();
+doSyntaxHighlighting();
 """
 
 def createFiles(filePath, content):

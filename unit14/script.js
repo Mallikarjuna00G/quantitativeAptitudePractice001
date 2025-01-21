@@ -1,3 +1,4 @@
-import {readTimeFunction} from "../unitCommonScript.js";
+import {readTimeFunction, doSyntaxHighlighting} from "../unitCommonScript.js";
 
 readTimeFunction();
+doSyntaxHighlighting();

@@ -38,4 +38,44 @@ function readTimeFunction() {
     }
 }
 
-export {readTimeFunction}
+function fetchAndFeedJS(fetchFile, feedId) {
+    // console.log(fetchFile);
+    fetch(fetchFile)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error ${response.status}`);
+        }
+        return response.text();
+    })
+    .then(scriptText => {
+        const codeElement = document.getElementById(feedId);
+        codeElement.textContent = scriptText;
+        hljs.highlightElement(codeElement);
+    })
+    .catch(error => {
+        console.error('Error fetching script:', error);
+        const preElement = document.getElementById(feedId);
+        preElement.textContent = `Error loading script: ${error.message}`;
+    });
+}
+
+function doSyntaxHighlighting() {
+    const srcFilesPreCodes = document.querySelectorAll(".srcFile pre code");
+    const srcFilesAnchors = document.querySelectorAll(".srcFile .programLink");
+
+    const examples = [];
+
+    srcFilesPreCodes.forEach((srcFileCode, i) => {
+        srcFileCode.id = `srcFileCode-${i}`;
+    });
+
+    srcFilesAnchors.forEach((srcFile, i) => {
+        examples.push({file: srcFile.textContent, id: srcFilesPreCodes[i].id});
+    });
+
+    examples.forEach(example => {
+        fetchAndFeedJS(`${example.file}`, `${example.id}`);
+    });
+}
+
+export {readTimeFunction, fetchAndFeedJS, doSyntaxHighlighting};
