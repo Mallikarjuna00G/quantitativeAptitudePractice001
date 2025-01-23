@@ -1,19 +1,16 @@
 /**
  * is divisible by 4?
- */
+*/
+import { isDivisibleBy4 } from "./divisibility.js";
 
 const numbers = [67920594, 618703572];
 
-const divider = 4;
-
 numbers.forEach(number => {
-    let lastTwoDigits = number % 100;
-
-    console.log(`>>> The number formed by last 2 digits of the ${number} is ${lastTwoDigits}`);
+    const divider = 4;
+    
     let str = "";
-    if(lastTwoDigits % divider !== 0) {
+    if(!isDivisibleBy4(number)) {
         str = "not ";
     }
     console.log(`The number is ${str}divisible by ${divider} because the number formed by last two digits is ${str}divisible by ${divider}.`);
-
-})
+});

@@ -1,19 +1,16 @@
 /**
  * is divisible by 8?
  */
+import {isDivisibleBy8} from "./divisibility.js";
 
 const numbers = [98016542, 106598304];
 
-const divider = 8;
-
 numbers.forEach(number => {
-    let lastTwoDigits = number % 1000;
-
-    console.log(`>>> The number formed by last 3 digits of the ${number} is ${lastTwoDigits}`);
+    const divider = 8;
     let str = "";
-    if(lastTwoDigits % divider !== 0) {
+    if(!isDivisibleBy8(number)) {
         str = "not ";
     }
     console.log(`The number is ${str}divisible by ${divider} because the number formed by last 3 digits is ${str}divisible by ${divider}.`);
-
-})
+    
+});

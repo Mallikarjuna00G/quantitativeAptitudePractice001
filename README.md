@@ -8,5 +8,10 @@
 
 To see either the *list of contents* or to go through each *units*, please visit `index.html`.
 
+Now we are adding `package.json` for each unit folders.
+Now we need use the npm command.
+`npm run <scripts-key>` for example `npm run example011` to execute `node example011.js` command.
+To understand the resemblance see one of the `package.json` file.
+
 ## Units
 1. [unit01](./unit01/): CoverPage

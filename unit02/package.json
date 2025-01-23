@@ -1,0 +1,21 @@
+{
+    "name": "unit02",
+    "version": "1.0.0",
+    "description": "QA:: Unit 02: Numbers",
+    "type": "module",
+    "scripts": {
+        "example001": "node example001.js",
+        "example002": "node example002.js",
+        "example003": "node example003.js",
+        "example004": "node example004.js",
+        "example005": "node example005.js",
+        "example006": "node example006.js",
+        "example007": "node example007.js",
+        "example008": "node example008.js",
+        "example009": "node example009.js",
+        "example010": "node example010.js",
+        "example011": "node example011.js",
+        "example012": "node example012.js"
+    },
+    "author": "Mallikarjuna00G"
+}
