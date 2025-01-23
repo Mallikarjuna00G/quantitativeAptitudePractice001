@@ -78,4 +78,21 @@ function doSyntaxHighlighting() {
     });
 }
 
-export {readTimeFunction, fetchAndFeedJS, doSyntaxHighlighting};
+function prependSpaces() {
+    const nbsp4 = document.querySelectorAll(".nbsp4");
+    nbsp4.forEach(nbsp => {
+        nbsp.innerHTML = "&nbsp;".repeat(4);
+    });
+
+    const nbsp8 = document.querySelectorAll(".nbsp8");
+    nbsp8.forEach(nbsp => {
+        nbsp.innerHTML = "&nbsp;".repeat(8);
+    });
+}
+
+export {
+    readTimeFunction, 
+    fetchAndFeedJS, 
+    doSyntaxHighlighting,
+    prependSpaces
+};

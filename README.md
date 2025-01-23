@@ -15,3 +15,4 @@ To understand the resemblance see one of the `package.json` file.
 
 ## Units
 1. [unit01](./unit01/): CoverPage
+1. [unit02](./unit02/): Numbers

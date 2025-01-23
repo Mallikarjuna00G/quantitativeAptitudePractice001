@@ -11,14 +11,14 @@ contentToIndexHTML = """<!DOCTYPE html>
     <title>{}</title>
     <script>
         window.MathJax = {{
-          tex: {{
-            inlineMath: [['$', '$'], ['\\(', '\\)']], // Explicitly include $...$
-            displayMath: [['$$', '$$'], ['\\[', '\\]']]
-          }},
-          options: {{
-              skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','annotation', 'annotation-xml'],
-              processEscapes: true
-          }}
+            tex: {{
+                inlineMath: [['$', '$']], // Explicitly include $...$
+                displayMath: [['$$', '$$']]
+            }},
+            options: {{
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','annotation', 'annotation-xml'],
+                processEscapes: true
+            }}
         }};
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -41,10 +41,11 @@ contentToIndexHTML = """<!DOCTYPE html>
 </body>
 </html>"""
 
-contentToJSFile = """import {readTimeFunction, doSyntaxHighlighting} from "../unitCommonScript.js";
+contentToJSFile = """import {readTimeFunction, doSyntaxHighlighting, prependSpaces} from "../unitCommonScript.js";
 
-readTimeFunction();
+prependSpaces();
 doSyntaxHighlighting();
+readTimeFunction();
 """
 
 def createFiles(filePath, content):
