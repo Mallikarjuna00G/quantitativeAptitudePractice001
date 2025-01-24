@@ -142,3 +142,13 @@ mjx-math > *:last-child {
 .calculation > mjx-container > mjx-math {
     border: unset;
 }
+
+.formula {
+    border-left: 8px inset blue;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+
+.formula:hover {
+    border-left: 8px inset red;
+}

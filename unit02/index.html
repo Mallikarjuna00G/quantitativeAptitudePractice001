@@ -464,15 +464,15 @@
             </div>  <!-- example -->
             <h3>Formulae</h3>
             <ol type="i">
-                <li>$(a + b)^2 = a^2 + b^2 + 2ab$</li>
-                <li>$(a - b)^2 = a^2 + b^2 - 2ab$</li>
-                <li>$(a + b)^2 - (a - b)^2 = 4ab$</li>
-                <li>$(a + b)^2 + (a - b)^2 = 2(a^2 + b^2)$</li>
-                <li>$a^2 - b^2 = (a + b)(a - b)$</li>
-                <li>$a^3 + b^3 = (a + b)(a^2 - ab + b^2)$</li>
-                <li>$a^3 - b^3 = (a - b)(a^2 + ab + b^2)$</li>
-                <li>$a.(b + c) = ab + ac$ <i>&DoubleRightArrow; Distributive law</i></li>
-                <li>$a.(b - c) = ab - ac$ <i>&DoubleRightArrow; Distributive law</i></li>
+                <li><span class="formula">$(a + b)^2 = a^2 + b^2 + 2ab$</span></li>
+                <li><span class="formula">$(a - b)^2 = a^2 + b^2 - 2ab$</span></li>
+                <li><span class="formula">$(a + b)^2 - (a - b)^2 = 4ab$</span></li>
+                <li><span class="formula">$(a + b)^2 + (a - b)^2 = 2(a^2 + b^2)$</span></li>
+                <li><span class="formula">$a^2 - b^2 = (a + b)(a - b)$</span></li>
+                <li><span class="formula">$a^3 + b^3 = (a + b)(a^2 - ab + b^2)$</span></li>
+                <li><span class="formula">$a^3 - b^3 = (a - b)(a^2 + ab + b^2)$</span></li>
+                <li><span class="formula">$a.(b + c) = ab + ac$</span> <i>&DoubleRightArrow; Distributive law</i></li>
+                <li><span class="formula">$a.(b - c) = ab - ac$</span> <i>&DoubleRightArrow; Distributive law</i></li>
             </ol>
             <div class="example">
                 <div class="ProblemDescription">
@@ -668,7 +668,7 @@
                 <div class="ProblemSolution">
                     <span class="answer">Solution: </span>
                     <p>On dividing 2000 by 17, we get 11 as remainder.</p>
-                    <p>&therefore; Number to be added $= (19 - 17) = 2$.</p>
+                    <p>&therefore; Required number to be subtracted = 11.</p>
                 </div>
             </div>  <!-- example -->
             <div class="example">
@@ -730,6 +730,157 @@
                             <p>Let $x \times 144 = 12528$. Then, $x = \frac{12528}{144} = 87$.</p>
                         </li>
                     </ol>
+                </div>
+            </div>  <!-- example -->
+            <h3>Progression</h3>
+            <dl>
+                <dt>Progression:</dt>
+                <dd>A succession of numbers formed and arranged in definite order according to certain definite rule, is called a progression.</dd>
+            </dl>
+            <dl>
+                <dt>Arithmetic Progression (A.P.):</dt>
+                <dd>If each term of a progression differs from its preceding term by a constant, then such a progression is called an arithmetical progression. This constant difference is called the common difference i A.P.</dd>
+            </dl>
+            <p>An A.P. with first term $a$ and common difference $d$ is given by $a, (a + d), (a + 2d), (a + 3d), .....$</p>
+            <p>The <b>nth term of this A.P. is given by <span class="formula">$T_{n} = a + (n - 1)d$</span>.</b></p>
+            <p><b>The sum of $n$ terms of this A.P. is</b></p>
+            <p><span class="formula">$S_n = \frac{n}{2}[2a + (n - 1)d] = \frac{n}{2}(first term + last term)$</span></p>
+            <div class="example">
+                <div class="ProblemDescription">
+                    <p><span class="question">Example 25: </span></p>
+                    <p>How many numbers between 11 and 90 are divisible by 7?</p>
+                </div>
+                <div class="ProblemSolution">
+                    <span class="answer">Solution: </span>
+                    <p>The required numbers are 14, 21, ......, 84.</p>
+                    <p>This is an A.P. with $a = 4$ and $d = (21 - 14) = 7$.</p>
+                    <p>Let is contain $n$ terms.</p>
+                    <p>Then, $T_n = 84$ &DoubleRightArrow; $a + (n - 1)d = 84$</p>
+                    <p><span class="nbsp4"></span>&DoubleRightArrow; $14 + (n - 1) \times 7 = 84$ or $n = 11$.<br></p>
+                    <p>&therefore; Required number of terms = 11.</p>
+                </div>
+            </div>  <!-- example -->
+            <div class="example">
+                <div class="ProblemDescription">
+                    <p><span class="question">Example 26: </span></p>
+                    <p>Find the sum of all odd numbers upto 100.</p>
+                </div>
+                <div class="ProblemSolution">
+                    <span class="answer">Solution: </span>
+                    <p>The given numbers are 1, 3, 5, ....., 99.</p>
+                    <p>This is an A.P. with $a = 1$, $d = 2$ and $T_n = 99$.</p>
+                    <p>Let it contain $n$ terms.</p>
+                    <div class="calculation">
+                        $T_n = a + (n - 1)d$<br>
+                        $99 = 1 + (n - 1)2$<br>
+                        $n = 50$<br>
+                    </div>
+                    <table class="calcPaths">
+                        <tr><td colspan="3" ><i><b>Note:</b> Just two pathways for calculating</i></td></tr>
+                        <tr>
+                            <td>
+                                <div class="calculation">
+                                    $S_n = \frac{n}{2}[2a + (n - 1)d]$<br>
+                                    $S_n = \frac{50}{2}[2 \times 1 + (50 - 1)2]$<br>
+                                    $S_n = 2550$<br>
+                                </div>
+                            </td>
+                            <td>OR</td>
+                            <td>
+                                <div class="calculation">
+                                    $S_n = \frac{n}{2}[2a + (n - 1)d]$<br>
+                                    $S_n = \frac{n}{2}[a + a + (n - 1)d]$<br>
+                                    $S_n = \frac{n}{2}[a + T_n]$<br>
+                                    $S_n = \frac{50}{2}[1 + 99]$<br>
+                                    $S_n = 2550$<br>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>&therefore; Sum of all odd numbers upto 100 is 50.</p>
+                </div>
+            </div>  <!-- example -->
+            <div class="example">
+                <div class="ProblemDescription">
+                    <p><span class="question">Example 27: </span></p>
+                    <p>Find the sum of all two digit numbers divisible by 3.</p>
+                </div>
+                <div class="ProblemSolution">
+                    <span class="answer">Solution: </span>
+                    <p>All 2 digit numbers divisible by 3 are 12, 15, 18, ....., 99.</p>
+                    <p>This is an A.P. with $a = 12$, $d = 3$ and $T_n = 99$.</p>
+                    <p>Let it contain $n$ terms.</p>
+                    <div class="calculation">
+                        $T_n = a + (n - 1)d$<br>
+                        $99 = 12 + (n - 1)3$<br>
+                        $n = 30$<br>
+                    </div>
+                    <table class="calcPaths">
+                        <tr><td colspan="3" ><i><b>Note:</b> Just two pathways for calculating</i></td></tr>
+                        <tr>
+                            <td>
+                                <div class="calculation">
+                                    $S_n = \frac{n}{2}[2a + (n - 1)d]$<br>
+                                    $S_n = \frac{30}{2}[2 \times 12 + (30 - 1)3]$<br>
+                                    $S_n = 1665$<br>
+                                </div>
+                            </td>
+                            <td>OR</td>
+                            <td>
+                                <div class="calculation">
+                                    $S_n = \frac{n}{2}[2a + (n - 1)d]$<br>
+                                    $S_n = \frac{n}{2}[a + a + (n - 1)d]$<br>
+                                    $S_n = \frac{n}{2}[a + T_n]$<br>
+                                    $S_n = \frac{30}{2}[12 + 99]$<br>
+                                    $S_n = 1665$<br>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>&therefore; Sum is 1665.</p>
+                </div>
+            </div>  <!-- example -->
+            <p><b>Some Important Results:</b></p>
+            <ol type="i">
+                <li><span class="formula">$(1 + 2 + 3 + .... + n) = \frac{n(n + 1)}{2}$</span></li>
+                <li><span class="formula">$(1^2 + 2^2 + 3^2 + ..... + n^2) = \frac{n(n + 1)(2n + 1)}{6}$</span></li>
+                <li><span class="formula">$(1^3 + 2^3 + 3^3 + ..... + n^3) = \frac{n^2(n + 1)^2}{4}$</span></li>
+            </ol>
+            <dl>
+                <dt>Geometric Progression (G.P.):</dt>
+                <dd>A progression of numbers in which every item bears a constant ration with its preceding term, is called a geometric progression.</dd>
+            </dl>
+            <p>The constant ratio is called the common ratio of the G.P.</p>
+            <p>A G.P. with first term $a$ and common ratio $r$ is: $a, ar, ar^2, ar^3, ....$</p>
+            <p>In this G.P., <span class="formula">$T_n = ar^{(n - 1)}$</span></p>
+            <p>Sum of the $n$ terms, <span class="formula">$S_n = \frac{a(1 - r^n)}{1 - r}$</span></p>
+            <div class="example">
+                <div class="ProblemDescription">
+                    <p><span class="question">Example 28: </span></p>
+                    <p>How many terms are there in 2, 4, 8, 16, ...., 1024?</p>
+                </div>
+                <div class="ProblemSolution">
+                    <span class="answer">Solution: </span>
+                    <p>Clearly 2, 4, 8, 16, ...., 1024 form a G.P. with $a = 2$ and $r = 4/2 = 2$</p>
+                    <p>Let the number of terms be $n$. Then,</p>
+                    <p>$2 \times 2^{n -1} 1024$ or $2^{n -1} = 512 = 2^9$</p>
+                    <p>&therefore; $n - 1 = 9$ or $n = 10$</p>
+                </div>
+            </div>  <!-- example -->
+            <div class="example">
+                <div class="ProblemDescription">
+                    <p><span class="question">Example 29: </span></p>
+                    <p>$2 + 2^2 + 2^3 + .... + 2^8 = ?$</p>
+                </div>
+                <div class="ProblemSolution">
+                    <span class="answer">Solution: </span>
+                    <p>Given series is a G.P. with $a = 2$, $r = 2$ & $n = 8$</p>
+                    <div class="calculation">
+                        <p>&therefore; $Sum = \frac{a(r^n - 1)}{(r -1)}$</p>
+                        <span class="nbsp4"></span>$= \frac{2(2^8 - 1)}{(2 -1)}$<br>
+                        <span class="nbsp4"></span>$= 2 \times 255$<br>
+                        <span class="nbsp4"></span>$= 510$<br>
+                    </div>
                 </div>
             </div>  <!-- example -->
             <!-- Supporting scripts -->

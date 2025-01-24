@@ -17,85 +17,111 @@
     // }
 
     "lsnip::example": {
-    "scope": "html",
-    "prefix": "example",
-    "body": [
-            "<div class=\"example\">",
-            "    <div class=\"ProblemDescription\">",
-            "        <p><span class=\"question\">Example $1: </span></p>",
-            "        <p>$3</p>",
-            "    </div>",
-            "    <div class=\"ProblemSolution\">",
-            "        <span class=\"answer\">Solution: </span>",
-            "        <p>$4</p>",
-            "        <hr>",
-            "        <div class=\"srcFile\">",
-            "            <a href=\"$2.js\" target=\"_blank\" class=\"programLink\">./$2.js</a>",
-            "            <pre><code class=\"language-javascript\"></code></pre>",
-            "        </div>",
-            "    </div>",
-            "</div>  <!-- example -->",
+        "scope": "html",
+        "prefix": "example",
+        "body": [
+                "<div class=\"example\">",
+                "    <div class=\"ProblemDescription\">",
+                "        <p><span class=\"question\">Example $1: </span></p>",
+                "        <p>$3</p>",
+                "    </div>",
+                "    <div class=\"ProblemSolution\">",
+                "        <span class=\"answer\">Solution: </span>",
+                "        <p>$4</p>",
+                "        <hr>",
+                "        <div class=\"srcFile\">",
+                "            <a href=\"$2.js\" target=\"_blank\" class=\"programLink\">./$2.js</a>",
+                "            <pre><code class=\"language-javascript\"></code></pre>",
+                "        </div>",
+                "    </div>",
+                "</div>  <!-- example -->",
         ],
         "description": "example"
     },
     "lsnip::example without srcFile": {
-    "scope": "html",
-    "prefix": "example1",
-    "body": [
-            "<div class=\"example\">",
-            "    <div class=\"ProblemDescription\">",
-            "        <p><span class=\"question\">Example $1: </span></p>",
-            "        <p>$2</p>",
-            "    </div>",
-            "    <div class=\"ProblemSolution\">",
-            "        <span class=\"answer\">Solution: </span>",
-            "        <p>$3</p>",
-            "    </div>",
-            "</div>  <!-- example -->",
+        "scope": "html",
+        "prefix": "example1",
+        "body": [
+                "<div class=\"example\">",
+                "    <div class=\"ProblemDescription\">",
+                "        <p><span class=\"question\">Example $1: </span></p>",
+                "        <p>$2</p>",
+                "    </div>",
+                "    <div class=\"ProblemSolution\">",
+                "        <span class=\"answer\">Solution: </span>",
+                "        <p>$3</p>",
+                "    </div>",
+                "</div>  <!-- example -->",
         ],
         "description": "example without srcFile"
     },
     "lsnip::nbsp4": {
-    "scope": "html",
-    "prefix": "nbsp4",
-    "body": [
-            "<span class=\"nbsp4\"></span>",
+        "scope": "html",
+        "prefix": "nbsp4",
+        "body": [
+                "<span class=\"nbsp4\"></span>",
         ],
         "description": "Add 4 spaces. (Handled by JS)"
     },
     "lsnip::nbsp8": {
-    "scope": "html",
-    "prefix": "nbsp8",
-    "body": [
-            "<span class=\"nbsp8\"></span>",
+        "scope": "html",
+        "prefix": "nbsp8",
+        "body": [
+                "<span class=\"nbsp8\"></span>",
         ],
         "description": "Add 8 spaces. (Handled by JS)"
     },
     "lsnip::Maths calculation line0": {
-    "scope": "html",
-    "prefix": "calcLine0",
-    "body": [
-            "$$1$<br>$2",
+        "scope": "html",
+        "prefix": "calcLine0",
+        "body": [
+                "$$1$<br>$2",
         ],
         "description": "Adding line0 for calulation."
     },
     "lsnip::Maths calculation line": {
-    "scope": "html",
-    "prefix": "calcLineN",
-    "body": [
-            "<span class=\"nbsp4\"></span>$= $1$<br>$2",
+        "scope": "html",
+        "prefix": "calcLineN",
+        "body": [
+                "<span class=\"nbsp4\"></span>$= $1$<br>$2",
         ],
         "description": "Adding line for calulation."
     },
     "lsnip::Maths calculation block": {
-    "scope": "html",
-    "prefix": "calcBlock",
-    "body": [
-            "<div class=\"calculation\">",
-            "    $$1$<br>$2",
-            "</div>"
+        "scope": "html",
+        "prefix": "calcBlock",
+        "body": [
+                "<div class=\"calculation\">",
+                "    $$1$<br>$2",
+                "</div>"
         ],
         "description": "Adding block for calulation."
     },
-    
+    "lsnip::Maths formula": {
+        "scope": "html",
+        "prefix": "formula",
+        "body": [
+                "<span class=\"formula\">$$1$</span>"
+        ],
+        "description": "Adding span of formula element."
+    },
+    "lsnip::Calculation paths": {
+        "scope": "html",
+        "prefix": "calcPaths",
+        "body": [
+            "<table class=\"calcPaths\">",
+            "    <tr><td colspan=\"3\" ><i><b>Note:</b> Just two pathways for calculating</i></td></tr>",
+            "    <tr>",
+            "        <td>",
+            "            $1",
+            "        </td>",
+            "        <td>OR</td>",
+            "        <td>",
+            "            $2",
+            "        </td>",
+            "    </tr>",
+            "</table>",
+        ],
+        "description": "Calculation paths."
+    },
 }
