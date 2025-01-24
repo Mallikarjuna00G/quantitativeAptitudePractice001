@@ -23,11 +23,11 @@
             "<div class=\"example\">",
             "    <div class=\"ProblemDescription\">",
             "        <p><span class=\"question\">Example $1: </span></p>",
-            "        <p></p>",
+            "        <p>$3</p>",
             "    </div>",
             "    <div class=\"ProblemSolution\">",
             "        <span class=\"answer\">Solution: </span>",
-            "        <p></p>",
+            "        <p>$4</p>",
             "        <hr>",
             "        <div class=\"srcFile\">",
             "            <a href=\"$2.js\" target=\"_blank\" class=\"programLink\">./$2.js</a>",
@@ -37,6 +37,23 @@
             "</div>  <!-- example -->",
         ],
         "description": "example"
+    },
+    "lsnip::example without srcFile": {
+    "scope": "html",
+    "prefix": "example1",
+    "body": [
+            "<div class=\"example\">",
+            "    <div class=\"ProblemDescription\">",
+            "        <p><span class=\"question\">Example $1: </span></p>",
+            "        <p>$2</p>",
+            "    </div>",
+            "    <div class=\"ProblemSolution\">",
+            "        <span class=\"answer\">Solution: </span>",
+            "        <p>$3</p>",
+            "    </div>",
+            "</div>  <!-- example -->",
+        ],
+        "description": "example without srcFile"
     },
     "lsnip::nbsp4": {
     "scope": "html",
