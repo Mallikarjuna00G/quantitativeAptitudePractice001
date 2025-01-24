@@ -4,7 +4,7 @@
 
 * {
     box-sizing: border-box;
-    line-height: 1.1rem;
+    /* line-height: 1.1rem; */
 }
 
 h3, h4, div {
@@ -116,18 +116,29 @@ pre {
     }
 }
 
-mjx-container,
+
+mjx-math,
 .calculation {
     border: 1px dotted green;
-    padding: 1px 4px;
+    padding: 2px 8px;
     background-color: #f8eee3;
+}
+mjx-math > * {
+    margin: 4px 0px;
+}
+
+mjx-math > *:first-child {
+    margin-left: 4px;
+}
+
+mjx-math > *:last-child {
+    margin-right: 4px;
 }
 
 .calculation {
-    line-height: 0.8rem;
+    /* line-height: 1.1rem; */
 }
 
-.calculation > mjx-container {
+.calculation > mjx-container > mjx-math {
     border: unset;
-    line-break: 0.8rem;
 }
